@@ -25,7 +25,8 @@ const WhyChoseUs = () => {
             <div className="flex flex-col md:flex-row space-y-8 md:space-y-0">
 
                 {/* Dedicated Team */}
-                <div className="px-5  md:px-0 md:w-[33.33%] space-y-8">
+                <div className="px-5  md:px-0 md:w-[33.33%] space-y-8"  
+                data-aos="fade-right" data-aos-duration="2000" data-aos-delay="400" data-aos-easing="linear">
 
                     {/* 1 */}
                     <div className='flex gap-3 '>
@@ -66,13 +67,13 @@ const WhyChoseUs = () => {
                 </div>
 
                 {/* img */}
-                <div className='px-5  md:px-0 md:w-[33.33%] '>
+                <div className='px-5  md:px-0 md:w-[33.33%] '  data-aos="zoom-in" data-aos-duration="1500" data-aos-delay="50" data-aos-easing="linear">
                     <img src={img1} alt="" />
                 </div>
 
 
                 {/* Integrated Supplier */}
-                <div className='px-5 md:px-0 md:w-[33.33%] space-y-8'>
+                <div className='px-5 md:px-0 md:w-[33.33%] space-y-8'  data-aos="fade-left" data-aos-duration="2000" data-aos-delay="400" data-aos-easing="linear" >
 
                     {/* 1 */}
                     <div className='flex flex-row-reverse gap-3 '>

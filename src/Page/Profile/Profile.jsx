@@ -1,37 +1,41 @@
-import { useContext , useState } from "react";
+import { useContext, useState } from "react";
 import { AuthContext } from "../Auth/AuthProvider";
 import { updateProfile } from "firebase/auth";
 import auth from "../../../firebase.config";
 import { toast } from "react-toastify";
+import { Helmet } from "react-helmet-async";
 
 const Profile = () => {
-    const { User, SetReload , reload} = useContext(AuthContext)
+    const { User, SetReload, reload } = useContext(AuthContext)
     const { photoURL, email, displayName, emailVerified } = User || {}
-    const [update, setUpdate ] = useState(false)
+    const [update, setUpdate] = useState(false)
 
-    const handleSubmit=(e)=>{
+    const handleSubmit = (e) => {
         e.preventDefault()
         setUpdate(true)
 
-        const name=e.target.name.value ;
-        const url=e.target.url.value ;
+        const name = e.target.name.value;
+        const url = e.target.url.value;
 
-        updateProfile(auth.currentUser,{
-            displayName:name, photoURL:url,
-          }).then(() => {
+        updateProfile(auth.currentUser, {
+            displayName: name, photoURL: url,
+        }).then(() => {
             toast.success('Profile Update Successful')
             setUpdate(false)
             SetReload(!reload)
-          })
+        })
 
     }
 
-   
-     
+
+
 
     return (
         <div>
-            <div className="flex flex-col justify-center items-center py-[136px] ">
+            <Helmet>
+                <title>aFruits | Profile </title>
+            </Helmet>
+            <div className="flex flex-col justify-center items-center py-[136px] "  data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300">
 
                 <div className="shadow-xl p-5 border-2 border-black rounded-2xl ">
 
@@ -58,17 +62,17 @@ const Profile = () => {
                             {
                                 update && <div className="space-y-2">
                                     <div className="form-control">
-                                <input type="text" name="name" placeholder="Enter your name" className="input input-bordered" required />
-                            </div>
-                            <div className="form-control">
-                                <input type="url" name="url" placeholder="Url" className="input input-bordered" required />
-                            </div>
+                                        <input type="text" name="name" placeholder="Enter your name" className="input input-bordered" required />
+                                    </div>
+                                    <div className="form-control">
+                                        <input type="url" name="url" placeholder="Url" className="input input-bordered" required />
+                                    </div>
                                 </div>
                             }
 
                             <div className="flex justify-center">
                                 <button type="submit" className="btn btn-sm bg-black text-white" >
-                                    {update?'Save':'Edit'}
+                                    {update ? 'Save' : 'Edit'}
                                 </button>
                             </div>
                         </form>

@@ -5,16 +5,21 @@ import { AuthContext } from "../Page/Auth/AuthProvider";
 
 const Header = () => {
     const { User, Logout } = useContext(AuthContext);
-    console.log(User)
 
     function handleLogout() {
         Logout()
     }
 
     const pages = <>
-        <NavLink to={'/'}>Home</NavLink>
-        <NavLink to={'/Profile'}>Profile</NavLink>
-        <NavLink to={'/Contract-us'}>Contract</NavLink>
+        <NavLink to={'/'} className={({ isActive }) => isActive ? 'btn btn-sm btn-outline font-bold border-2 text-white md:text-black  md:border-black' : 'font-bold'}
+            data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="500"
+        >Home</NavLink>
+        <NavLink to={'/Profile'} className={({ isActive }) => isActive ? 'btn btn-sm btn-outline font-bold border-2 text-white md:text-black  md:border-black' : 'font-bold'}
+         data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="700"
+        >Profile</NavLink>
+        <NavLink to={'/Contract-us'} className={({ isActive }) => isActive ? 'btn btn-sm btn-outline font-bold border-2 text-white md:text-black  md:border-black' : 'font-bold'}
+         data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="1000"
+        >Contract</NavLink>
     </>
 
 
@@ -26,17 +31,18 @@ const Header = () => {
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                         </div>
-                        <ul tabIndex={0} className="menu space-y-2 font-bold menu-sm text-center text-white dropdown-content mt-3 z-[1] p-2 shadow bg-black rounded-box w-32">
+                        <ul tabIndex={0} className="menu space-y-2 font-bold menu-sm text-center text-white dropdown-content mt-3 z-50 p-2 shadow bg-black rounded-box w-32">
                             {pages}
                         </ul>
                     </div>
-                    <div className="flex items-center  text-xl font-bold gap-0">
+                    <div className="flex items-center  text-xl font-bold gap-0"
+                        data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300" >
                         a<span className="text-[#FF6868]">Fruits</span>
                         <img src={logo} alt="" className="w-8 ml-1" />
                     </div>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1 space-x-10 font-bold ">
+                    <ul className="menu menu-horizontal px-1 space-x-10 flex items-center font-bold ">
                         {pages}
                     </ul>
                 </div>
@@ -69,7 +75,7 @@ const Header = () => {
                             </div>
                             :
                             // Logout  
-                            <NavLink className="font-bold text-[#5755FE]" to={'/Login'}>Login</NavLink>
+                            <NavLink to={'/Login'} className={({ isActive }) => isActive ? 'btn btn-sm btn-outline font-bold border-2 text-white md:text-black  md:border-black' : 'font-bold'} data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300"  >Login</NavLink>
                     }
                 </div>
             </div>

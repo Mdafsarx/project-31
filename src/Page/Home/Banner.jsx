@@ -19,7 +19,7 @@ import img4 from '../../assets/banner4.png'
 
 const Banner = () => {
     return (
-        <div className='bg-slate-900'>
+        <div className='bg-slate-900 '>
             <Swiper
         spaceBetween={30}
         centeredSlides={true}

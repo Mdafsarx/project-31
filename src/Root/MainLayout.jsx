@@ -4,7 +4,7 @@ import Footer from "../Components/Footer";
 
 const MainLayout = () => {
     return (
-        <div>
+        <div className="overflow-x-hidden">
             <Header/>
             {/* outlet depend on route location  */}
             <Outlet></Outlet>

@@ -9,7 +9,7 @@ const FiveFruit = () => {
 
             <div className='w-10 md:w-1/2  mx-auto'>
 
-                <div className='flex items-center justify-center gap-3 p-3 md:p-6 hover:bg-slate-900 hover:text-white bg-white shadow-2xl -mt-36 absolute z-10 rounded-xl '>
+                <div className='flex items-center justify-center gap-3 p-3 md:p-6 hover:bg-slate-900 hover:text-white bg-white shadow-2xl -mt-36 absolute z-50 rounded-xl ' data-aos="zoom-out" data-aos-duration="1200" data-aos-delay="1300">
 
                     <div className='flex flex-col items-center'>
                         <img src={img1} alt="" />

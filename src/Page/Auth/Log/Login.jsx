@@ -5,6 +5,7 @@ import { GrGithub } from "react-icons/gr";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../AuthProvider';
 import { toast } from 'react-toastify';
+import { Helmet } from 'react-helmet-async';
 
 const Login = () => {
     const { Google, Github, login } = useContext(AuthContext)
@@ -28,7 +29,7 @@ const Login = () => {
         Google()
             .then(() => {
                 toast.success(`Login Successful`)
-                navLink(location.state||'/')
+                navLink(location.state || '/')
             })
             .catch((error) => toast.error(error.message))
     }
@@ -36,19 +37,23 @@ const Login = () => {
     // github
     const handleGithub = () => {
         Github()
-       .then(() => {
-            toast.success(`Login successful`)
-            navLink(location.state||'/')
-        }).catch(error => toast.error(error.message))
+            .then(() => {
+                toast.success(`Login successful`)
+                navLink(location.state || '/')
+            }).catch(error => toast.error(error.message))
     }
 
     return (
         <div>
+            
+            <Helmet>
+                <title>aFruits | Login </title>
+            </Helmet>
 
             <div className="flex flex-col lg:flex-row-reverse ">
 
 
-                <div className='md:w-[60%] bg-[#5755FE] flex items-center py-3 '>
+                <div className='md:w-[60%] bg-[#5755FE] flex items-center py-3 '  data-aos="fade-left" data-aos-duration="2000" data-aos-delay="300" >
 
                     <div className="md:w-1/2 mx-auto ">
 
@@ -86,7 +91,7 @@ const Login = () => {
                 </div>
 
 
-                <div className='hidden md:flex h-[445px]'>
+                <div className='hidden md:flex h-[445px]'  data-aos="fade-right" data-aos-duration="2000" data-aos-delay="300" >
                     <img src={bg1} alt="" className='w-full' />
                 </div>
 

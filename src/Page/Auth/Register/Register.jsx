@@ -6,6 +6,7 @@ import { AuthContext } from "../AuthProvider";
 import { toast } from "react-toastify";
 import { updateProfile } from "firebase/auth";
 import auth from "../../../../firebase.config";
+import { Helmet } from "react-helmet-async";
 
 const Register = () => {
     const { register, Google, Github ,SetReload , reload } = useContext(AuthContext);
@@ -56,11 +57,14 @@ const Register = () => {
 
     return (
         <div>
+            <Helmet>
+                    <title>aFruits | Register </title>
+                  </Helmet>
             <div className="flex flex-col lg:flex-row-reverse ">
 
                 <div className='w-full bg-[#5755FE] flex items-center py-3 '>
 
-                    <div className="md:w-1/3 mx-auto ">
+                    <div className="md:w-1/3 mx-auto "  data-aos="zoom-in" data-aos-duration="2000" data-aos-delay="300">
 
                         <form className="card-body" onSubmit={handleSubmit}>
 
