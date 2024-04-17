@@ -1,0 +1,66 @@
+{
+    "items": [
+      {
+        "fruit_name": "Apple",
+        "img": "https://i.postimg.cc/prTJQ8mj/louis-hansel-Mardk-T836-BU-unsplash-1.jpg",
+        "price": "$19.99",
+        "rating": 4.5
+      },
+      {
+        "fruit_name": "Banana",
+        "img": "https://i.postimg.cc/3rv6d4sq/mike-dorner-sf-1-ZDA1-YFw-unsplash.jpg",
+        "price": "$29.99",
+        "rating": 4.2
+      },
+      {
+        "fruit_name": "Orange",
+        "img": "https://i.postimg.cc/Gp02ksM5/marcos-ramirez-SOdyjl7-A0-Qk-unsplash.jpg",
+        "price": "$14.99",
+        "rating": 4.7
+      },
+      {
+        "fruit_name": "Grapes",
+        "img": "https://i.postimg.cc/J45gMwXY/nordwood-themes-i8z-R0q8-Qk-E-unsplash.jpg",
+        "price": "$39.99",
+        "rating": 4.8
+      },
+      {
+        "fruit_name": "Strawberry",
+        "img": "https://i.postimg.cc/kMzYxQ3C/jacek-dylag-k-H3-Sr9-K8-EBA-unsplash.jpg",
+        "price": "$24.99",
+        "rating": 4.3
+      },
+      {
+        "fruit_name": "Pineapple",
+        "img": "https://i.postimg.cc/fyjDKnX1/julien-pianetti-Cr9h-Zrp-C1-Oc-unsplash.jpg",
+        "price": "$49.99",
+        "rating": 4.6
+      },
+      {
+        "fruit_name": "Mango",
+        "img": "https://i.postimg.cc/zfWbL1rK/deon-black-f-XEL4k6-Pfgg-unsplash.jpg",
+        "price": "$34.99",
+        "rating": 4.1
+      },
+      {
+        "fruit_name": "Watermelon",
+        "img": "https://i.postimg.cc/Gmx05wMj/sahand-babali-ei-Ndbq-WZww4-unsplash.jpg",
+        "price": "$59.99",
+        "rating": 4.9
+      },
+      {
+        "fruit_name": "Peach",
+        "img": "https://i.postimg.cc/RCwNZqqC/luann-hunt-O3-Tl-S547j7k-unsplash.jpg",
+        "price": "$44.99",
+        "rating": 4.4
+      },
+      {
+        "fruit_name": "Cherry",
+        "img": "https://i.postimg.cc/59Z9LJY7/quaritsch-photography-l-Z8on-Q1wu-Y8-unsplash.jpg",
+        "price": "$19.99",
+        "rating": 4.7
+      }
+      
+    ]
+  }
+  
